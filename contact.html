@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --deep-teal: #0a4d68;
+            --coral: #ff6b6b;
+            --light-gray: #f8f9fa;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--deep-teal) 0%, #088395 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section h1 {
+            font-size: calc(2rem + 4vw);
+            font-weight: 800;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+        .hero-section p {
+            font-size: calc(1rem + 1vw);
+        }
+        .contact-card, .info-card {
+            border: none;
+            background: var(--light-gray);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .contact-card:hover, .info-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        .contact-card h3, .info-card h3 {
+            color: var(--deep-teal);
+            font-weight: 700;
+        }
+        .form-control, .form-control:focus {
+            border: 2px solid var(--deep-teal);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 10px rgba(10, 77, 104, 0.5);
+            border-color: var(--coral);
+        }
+        .form-label {
+            color: var(--deep-teal);
+            font-weight: 600;
+        }
+        .btn-primary {
+            background-color: var(--coral);
+            border-color: var(--coral);
+            font-weight: 600;
+            border-radius: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #ff4d4d;
+            border-color: #ff4d4d;
+            transform: translateY(-2px);
+        }
+        .btn-outline-primary {
+            border-color: var(--coral);
+            color: var(--coral);
+            font-weight: 600;
+            border-radius: 10px;
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--coral);
+            color: white;
+        }
+        .navbar {
+            background-color: var(--light-gray);
+        }
+        .navbar-brand {
+            color: var(--deep-teal) !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .navbar-brand:hover {
+            color: var(--coral) !important;
+        }
+        .navbar-nav .nav-link {
+            color: var(--deep-teal) !important;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--coral) !important;
+        }
+        .navbar-nav .nav-link.active {
+            color: var(--coral) !important;
+            border-bottom: 2px solid var(--coral);
+        }
+        footer {
+            background: var(--deep-teal);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        footer a {
+            color: var(--coral);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #ff4d4d;
+        }
+        footer .list-unstyled li {
+            margin-bottom: 8px;
+        }
+        footer .social-links a {
+            font-size: 1.2rem;
+            margin-right: 12px;
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            .hero-section h1 {
+                font-size: calc(1.5rem + 3vw);
+            }
+            .hero-section p {
+                font-size: 1rem;
+            }
+            .contact-card, .info-card {
+                padding: 15px;
+            }
+            .form-control, .form-label {
+                font-size: 0.9rem;
+            }
+            footer {
+                text-align: center;
+            }
+            footer .col-md-4 {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Hamburger Menu -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Your Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="#">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="mb-4 animate__animated animate__zoomIn">Connect With Us</h1>
+            <p class="lead mb-5 animate__animated animate__fadeIn" style="animation-delay: 0.3s;">We’re here to bring your ideas to life. Reach out today!</p>
+            <a href="#contact" class="btn btn-light btn-lg shadow animate__animated animate__pulse" style="animation-delay: 0.6s;">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <main class="container my-5" id="contact">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="contact-card p-4 animate__animated animate__fadeIn" style="animation-delay: 0.2s;">
+                    <h3 class="mb-4 text-center">Send Us a Message</h3>
+                    <div>
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="info-card p-4 animate__animated animate__fadeIn" style="animation-delay: 0.4s;">
+                    <h3 class="mb-4 text-center">Contact Information</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><strong>Email:</strong> <a href="mailto:contact@yourbrand.com">contact@yourbrand.com</a></li>
+                        <li class="mb-3"><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></li>
+                        <li class="mb-3"><strong>Address:</strong> 123 Main Street, City, Country</li>
+                        <li><strong>Hours:</strong> Mon-Fri, 9 AM - 5 PM</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn-outline-primary">Schedule a Call</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Your Brand</h5>
+                    <p>Transforming ideas into reality with innovation and passion since 2025.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Connect With Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:contact@yourbrand.com">contact@yourbrand.com</a></li>
+                        <li><a href="tel:+1234567890">(123) 456-7890</a></li>
+                        <li>123 Main Street, City, Country</li>
+                    </ul>
+                    <div class="social-links mt-3">
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.2);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Your Brand. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
